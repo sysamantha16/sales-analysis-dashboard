@@ -25,5 +25,5 @@ Users can upload a CSV file, filter data, view visualizations, and download clea
 pip install -r requirements.txt
 streamlit run app.py
 ```
-## Visit Website
+## Live App
 [Click here to open the live Sales Dashboard](https://sales-analysis-dashboard-lcbicbus32qtqgucvzymp2.streamlit.app/)
