@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 st.set_page_config(page_title="Sales Dashboard", layout="wide")
 
@@ -32,9 +33,14 @@ if uploaded_file is not None:
     filtered_df["Profit"] = (filtered_df["Unit_Price"] - filtered_df["Unit_Cost"]) * filtered_df["Quantity_Sold"]
 
     # Charts
-    st.subheader("📈 Total Sales by Product Category")
+    '''st.subheader("📈 Total Sales by Product Category")
     sales_by_category = filtered_df.groupby("Product_Category")["Sales_Amount"].sum().sort_values(ascending=False)
-    st.bar_chart(sales_by_category)
+    st.bar_chart(sales_by_category)'''
+
+    # Example - Total Sales by Product Category
+    fig, ax = plt.subplots()
+    sns.barplot(x='Product_Category', y='Sales_Amount', data=df_filtered, ax=ax)
+    st.pyplot(fig)
 
     st.subheader("🧭 Average Discount by Customer Type")
     discount_by_customer = filtered_df.groupby("Customer_Type")["Discount"].mean()
