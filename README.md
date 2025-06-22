@@ -14,10 +14,10 @@ Users can upload a CSV file, filter data, view visualizations, and download clea
 
 ## Tech Stack
 - Python
-- PySpark
-- Pandas
-- Streamlit
-- Matplotlib
+- PySpark: Data Analysis
+- Pandas: Data Manipulation
+- Streamlit: App Interface
+- Seaborn + Matplotlib: Visualization
 
 ## Running the App Locally
 
